@@ -1,3 +1,5 @@
+EDIT: Haxed for internal publishing
+
 [![Build Status](https://secure.travis-ci.org/SlexAxton/messageformat.js.png)](http://travis-ci.org/SlexAxton/messageformat.js)
 
 # messageformat.js
