@@ -34,26 +34,26 @@
 
   // methods in common with the generated MessageFormat
   // check d
-  function c(d){
+  global.c = function c(d){
     if(!d){throw new Error("MessageFormat: No data passed to function.")}
   }
   // require number
-  function n(d,k,o){
+  global.n = function n(d,k,o){
     if(isNaN(d[k])){throw new Error("MessageFormat: `"+k+"` isnt a number.")}
     return d[k] - (o || 0);
   }
   // value
-  function v(d,k){
+  global.v = function v(d,k){
     c(d);
     return d[k];
   }
   // plural
-  function p(d,k,o,l,p){
+  global.p = function p(d,k,o,l,p){
     c(d);
     return d[k] in p ? p[d[k]] : (k = MessageFormat.locale[l](d[k]-o), k in p ? p[k] : p.other);
   }
   // select
-  function s(d,k,p){
+  global.s = function s(d,k,p){
     c(d);
     return d[k] in p ? p[d[k]] : p.other;
   }
